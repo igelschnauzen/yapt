@@ -2,8 +2,7 @@
   font-family: "Space Grotesk";
   src: url("../public/SpaceGrotesk-VariableFont_wght.ttf");
 }
-html,
-body {
+html, body {
   padding: 0px;
   margin: 0px;
   font-family: "Space Grotesk", sans-serif;
@@ -85,4 +84,23 @@ body {
 .pomodoro__button:hover {
   background-color: rgba(0, 0, 0, 0);
   color: aliceblue;
+}
+.pomodoro__button:active {
+  transform: scale(0.95);
+}
+.pomodoro__button--inactivemode {
+  background-color: rgba(0, 0, 0, 0);
+  color: aliceblue;
+}
+.pomodoro__button--inactivemode:hover {
+  background-color: aliceblue;
+  color: rgba(0, 0, 0, 0.9);
+}
+.pomodoro__button--activemode {
+  background-color: aliceblue;
+  color: rgba(0, 0, 0, 0.9);
+}
+.pomodoro__button--activemode:hover {
+  background-color: aliceblue;
+  color: rgba(0, 0, 0, 0.9);
 }/*# sourceMappingURL=index.css.map */

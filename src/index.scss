@@ -3,8 +3,7 @@
     src: url("../public/SpaceGrotesk-VariableFont_wght.ttf");
 }
 
-html,
-body {
+html,body {
     padding: 0px;
     margin: 0px;
     font-family: "Space Grotesk", sans-serif;
@@ -94,6 +93,30 @@ body {
         &:hover {
             background-color: rgba(0, 0, 0, 0);
             color: aliceblue;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &--inactivemode {
+            background-color: rgba(0, 0, 0, 0);
+            color: aliceblue;
+
+            &:hover {
+                background-color: aliceblue;
+                color: rgba(0, 0, 0, 0.9);
+            }
+        }
+
+        &--activemode {
+            background-color: aliceblue;
+            color: rgba(0, 0, 0, 0.9);
+
+            &:hover {
+                background-color: aliceblue;
+                color: rgba(0, 0, 0, 0.9);
+            }
         }
     }
 }

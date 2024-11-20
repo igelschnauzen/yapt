@@ -1,4 +1,4 @@
-import Pomodoro from "./components/pomodoro"
+import Pomodoro from "./components/Pomodoro"
 function App() {
 
   return (
