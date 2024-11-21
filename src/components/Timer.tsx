@@ -13,6 +13,10 @@ function Timer({isRunning, time, setTime} : {isRunning: boolean, time: number, s
     }
 
     useEffect(() => {
+        document.title = `${minutes}:${seconds} | Pomodoro`;
+    }, [minutes, seconds])
+
+    useEffect(() => {
         if(isRunning) {
             const timer = setInterval(() => {
                 setTime((prevTime: number): number => {

@@ -13,7 +13,7 @@ function Pomodoro() {
         <div className="pomodoro">
             <Modes mode={mode} setMode={setMode} setIsRunning={setIsRunning} setTime={setTime} />
             <Timer isRunning={isRunning} time={time} setTime={setTime}/>
-            <Controls isRunning={isRunning} setIsRunning={setIsRunning} setTime={setTime}/>
+            <Controls isRunning={isRunning} setIsRunning={setIsRunning} setTime={setTime} mode={mode}/>
         </div>
     )       
 }
