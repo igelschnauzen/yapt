@@ -22,6 +22,10 @@ function Timer({isRunning, time, setTime} : {isRunning: boolean, time: number, s
                 setTime((prevTime: number): number => {
                     if(prevTime <= 0) {
                         clearInterval(timer);
+
+                        const sound = new Audio("../../public/sound.wav");
+                        sound.play();
+
                         return 0;
                     }
                     return prevTime - 1;
