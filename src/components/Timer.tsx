@@ -1,26 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, FC } from "react";
 
-function Timer({isRunning, time, setTime} : {isRunning: boolean, time: number, setTime: any}) {
+interface TimerProps {
+    isRunning: boolean;
+    time: number;
+    setTime: (time: number | ((prevTime: number) => number)) => void;
+}
+
+const Timer: FC<TimerProps> = ({ isRunning, time, setTime }) => {
     let minutes = Math.floor(time / 60).toString();
     let seconds = Math.floor(time % 60).toString();
 
-    if(minutes.length == 1) {
+    if (minutes.length === 1) {
         minutes = "0" + minutes;
     }
 
-    if(seconds.length == 1) {
+    if (seconds.length === 1) {
         seconds = "0" + seconds;
     }
 
     useEffect(() => {
         document.title = `${minutes}:${seconds} | Pomodoro`;
-    }, [minutes, seconds])
+    }, [minutes, seconds]);
 
     useEffect(() => {
-        if(isRunning) {
+        if (isRunning) {
             const timer = setInterval(() => {
                 setTime((prevTime: number): number => {
-                    if(prevTime <= 0) {
+                    if (prevTime <= 0) {
                         clearInterval(timer);
 
                         const sound = new Audio("../../public/sound.wav");
@@ -40,6 +46,6 @@ function Timer({isRunning, time, setTime} : {isRunning: boolean, time: number, s
             <h1>{minutes}:{seconds}</h1>
         </div>
     );
-}
+};
 
 export default Timer;

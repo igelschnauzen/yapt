@@ -1,10 +1,10 @@
 import Controls from "./Controls";
 import Timer from "./Timer";
 import Modes from "./Modes";
-import { useState } from "react";
+import { useState, FC } from "react";
 import { Mode } from "../types";
 
-function Pomodoro() {
+const Pomodoro: FC = () => {
     const [isRunning, setIsRunning] = useState(false);
     const [time, setTime] = useState(25 * 60);
     const [mode, setMode] = useState("break" as Mode);
