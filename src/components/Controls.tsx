@@ -1,6 +1,14 @@
+import { FC } from 'react';
 import { Mode } from "../types.ts";
 
-function Controls({isRunning, setIsRunning, setTime, mode} : {isRunning: boolean, setIsRunning: (isRunning: boolean) => void, setTime: (time: number) => void, mode: Mode}) {
+interface ControlsProps {
+    isRunning: boolean;
+    setIsRunning: (isRunning: boolean) => void;
+    setTime: (time: number) => void;
+    mode: Mode;
+}
+
+const Controls: FC<ControlsProps> = ({ isRunning, setIsRunning, setTime, mode }) => {
 
     function handleToggle(): void {
         setIsRunning(!isRunning);
