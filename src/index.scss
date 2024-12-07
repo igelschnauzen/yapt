@@ -64,8 +64,7 @@ html,body {
 
     &__timer {
         font-size: 3rem;
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     }
 
     &__controls {
@@ -90,17 +89,17 @@ html,body {
         background-color: aliceblue;
         color: rgba(0, 0, 0, 0.9);
         cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 
         &:hover {
             background-color: rgba(0, 0, 0, 0);
             color: aliceblue;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
         }
 
         &:active {
             transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
         }
 
         &--inactivemode {
